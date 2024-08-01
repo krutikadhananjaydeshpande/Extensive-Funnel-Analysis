@@ -90,10 +90,10 @@ This query analyzes the full conversion funnel, showing how many users reach eac
 
 ## Key Insights
 
--Understand where users are dropping off in the purchase process
--Identify which steps of the funnel have the highest and lowest conversion rates
--Compare the performance of different landing pages
--Analyze the effectiveness of each stage in the purchasing funnel
+**Understand where users are dropping off in the purchase process
+**Identify which steps of the funnel have the highest and lowest conversion rates
+**Compare the performance of different landing pages
+**Analyze the effectiveness of each stage in the purchasing funnel
 
 
 ## Recommendations
@@ -106,9 +106,9 @@ Based on the analysis, we can make the following recommendations:
 
 ## Future Work
 
--Segment the funnel analysis by user characteristics or traffic sources
--Conduct A/B tests on steps with low conversion rates to improve performance
--Analyze changes in funnel performance over time
--Investigate the impact of pricing, promotions, or seasonal trends on the conversion funnel
+**Segment the funnel analysis by user characteristics or traffic sources
+**Conduct A/B tests on steps with low conversion rates to improve performance
+**Analyze changes in funnel performance over time
+**Investigate the impact of pricing, promotions, or seasonal trends on the conversion funnel
 
 This analysis provides valuable insights into user behavior and website performance, allowing for data-driven decisions to optimize the conversion funnel and improve overall e-commerce performance.
