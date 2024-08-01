@@ -26,7 +26,6 @@ This query compares the weekly session volume between gsearch and bsearch, helpi
 
 2. **Analyzing mobile traffic percentage for gsearch and bsearch**:
 
-
 This query analyzes the percentage of mobile traffic for gsearch and bsearch, helping us understand device preferences across different channels
 
 3. **Comparing conversion rates for gsearch and bsearch by device type**:
