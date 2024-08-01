@@ -26,18 +26,6 @@ This query compares the weekly session volume between gsearch and bsearch, helpi
 
 2. **Analyzing mobile traffic percentage for gsearch and bsearch**:
 
-   
-```sql
-SELECT 
-    utm_source,
-    COUNT(website_session_id) AS sessions,
-    COUNT(CASE WHEN device_type = 'mobile' THEN website_session_id END) AS mobile_sessions,
-    COUNT(CASE WHEN device_type = 'mobile' THEN website_session_id END) / COUNT(website_session_id) AS pct_mobile
-FROM website_sessions
-WHERE created_at BETWEEN '2012-08-22' AND '2012-11-30' 
-    AND utm_campaign = 'nonbrand'
-GROUP BY utm_source;
-```
 
 This query analyzes the percentage of mobile traffic for gsearch and bsearch, helping us understand device preferences across different channels
 
