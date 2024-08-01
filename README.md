@@ -90,10 +90,10 @@ This query analyzes the full conversion funnel, showing how many users reach eac
 
 ## Key Insights
 
-**Understand where users are dropping off in the purchase process
-**Identify which steps of the funnel have the highest and lowest conversion rates
-**Compare the performance of different landing pages
-**Analyze the effectiveness of each stage in the purchasing funnel
+*Understand where users are dropping off in the purchase process
+*Identify which steps of the funnel have the highest and lowest conversion rates
+*Compare the performance of different landing pages
+*Analyze the effectiveness of each stage in the purchasing funnel
 
 
 ## Recommendations
