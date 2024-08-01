@@ -11,7 +11,7 @@ Maven Fuzzy Factory
 ## Queries and Their Purposes
 
 1. **Comparing gsearch and bsearch session volume**:
-   ```sql
+```sql
    SELECT 
        DATE(MIN(created_at)) AS week_start_date,
        COUNT(DISTINCT CASE WHEN utm_source = 'gsearch' THEN website_session_id END) AS gsearch_sessions,
