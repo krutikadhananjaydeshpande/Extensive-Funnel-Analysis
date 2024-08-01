@@ -56,8 +56,7 @@ Maven Fuzzy Factory
 
 2. **Analyzing Full Conversion Funnel**:
    ```sql
-   CREATE TEMPORARY TABLE session_level_made_it_flags AS
-SELECT 
+   CREATE TEMPORARY TABLE session_level_made_it_flags AS SELECT 
     website_session_id,
     MAX(products_page) AS product_made_it,
     MAX(mrfuzzy_page) AS mrfuzzy_made_it,
@@ -65,8 +64,7 @@ SELECT
     MAX(shipping_page) AS shipping_made_it,
     MAX(billing_page) AS billing_made_it,
     MAX(thankyou_page) AS thankyou_made_it
-FROM (
-    SELECT 
+FROM (SELECT 
         website_session_id,
         CASE WHEN pageview_url = '/products' THEN 1 ELSE 0 END AS products_page,
         CASE WHEN pageview_url = '/the-original-mr-fuzzy' THEN 1 ELSE 0 END AS mrfuzzy_page,
@@ -78,7 +76,6 @@ FROM (
     WHERE created_at BETWEEN '2012-08-05' AND '2012-09-05'
 ) AS pageview_level
 GROUP BY website_session_id;
-
 SELECT 
     COUNT(DISTINCT website_session_id) AS sessions,
     COUNT(DISTINCT CASE WHEN product_made_it = 1 THEN website_session_id ELSE NULL END) AS to_products,
