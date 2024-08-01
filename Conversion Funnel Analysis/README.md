@@ -64,21 +64,21 @@ Maven Fuzzy Factory
     MAX(shipping_page) AS shipping_made_it,
     MAX(billing_page) AS billing_made_it,
     MAX(thankyou_page) AS thankyou_made_it
-FROM (
-    SELECT 
-        website_session_id,
+   FROM (
+   SELECT
+   website_session_id,
         CASE WHEN pageview_url = '/products' THEN 1 ELSE 0 END AS products_page,
         CASE WHEN pageview_url = '/the-original-mr-fuzzy' THEN 1 ELSE 0 END AS mrfuzzy_page,
         CASE WHEN pageview_url = '/cart' THEN 1 ELSE 0 END AS cart_page,
         CASE WHEN pageview_url = '/shipping' THEN 1 ELSE 0 END AS shipping_page,
         CASE WHEN pageview_url = '/billing' THEN 1 ELSE 0 END AS billing_page,
         CASE WHEN pageview_url = '/thank-you-for-your-order' THEN 1 ELSE 0 END AS thankyou_page
-    FROM website_pageviews
-    WHERE created_at BETWEEN '2012-08-05' AND '2012-09-05'
-) AS pageview_level
-GROUP BY website_session_id;
+   FROM website_pageviews
+   WHERE created_at BETWEEN '2012-08-05' AND '2012-09-05'
+   ) AS pageview_level
+   GROUP BY website_session_id;
 
-SELECT 
+   SELECT 
     COUNT(DISTINCT website_session_id) AS sessions,
     COUNT(DISTINCT CASE WHEN product_made_it = 1 THEN website_session_id ELSE NULL END) AS to_products,
     COUNT(DISTINCT CASE WHEN mrfuzzy_made_it = 1 THEN website_session_id ELSE NULL END) AS to_mrfuzzy,
@@ -86,33 +86,32 @@ SELECT
     COUNT(DISTINCT CASE WHEN shipping_made_it = 1 THEN website_session_id ELSE NULL END) AS to_shipping,
     COUNT(DISTINCT CASE WHEN billing_made_it = 1 THEN website_session_id ELSE NULL END) AS to_billing,
     COUNT(DISTINCT CASE WHEN thankyou_made_it = 1 THEN website_session_id ELSE NULL END) AS to_thankyou
-FROM session_level_made_it_flags;
-
+   FROM session_level_made_it_flags;
 
 This query analyzes the full conversion funnel, showing how many users reach each step of the purchasing process.
 
 ## Key Insights
 
--Understand where users are dropping off in the purchase process
--Identify which steps of the funnel have the highest and lowest conversion rates
--Compare the performance of different landing pages
--Analyze the effectiveness of each stage in the purchasing funnel
+* Understand where users are dropping off in the purchase process
+* Identify which steps of the funnel have the highest and lowest conversion rates
+* Compare the performance of different landing pages
+* Analyze the effectiveness of each stage in the purchasing funnel
 
 
 ## Recommendations
 Based on the analysis, we can make the following recommendations:
 
--Optimize the step with the highest drop-off rate to improve overall conversions
--A/B test different versions of the landing pages to reduce bounce rates
--Simplify the checkout process if there's a significant drop-off between cart and purchase
--Ensure product pages are informative and compelling to encourage adding items to cart
+* Optimize the step with the highest drop-off rate to improve overall conversions
+* A/B test different versions of the landing pages to reduce bounce rates
+* Simplify the checkout process if there's a significant drop-off between cart and purchase
+* Ensure product pages are informative and compelling to encourage adding items to cart
 
 ## Future Work
 
--Segment the funnel analysis by user characteristics or traffic sources
--Conduct A/B tests on steps with low conversion rates to improve performance
--Analyze changes in funnel performance over time
--Investigate the impact of pricing, promotions, or seasonal trends on the conversion funnel
+* Segment the funnel analysis by user characteristics or traffic sources
+* Conduct A/B tests on steps with low conversion rates to improve performance
+* Analyze changes in funnel performance over time
+* Investigate the impact of pricing, promotions, or seasonal trends on the conversion funnel
 
 This analysis provides valuable insights into user behavior and website performance, allowing for data-driven decisions to optimize the conversion funnel and improve overall e-commerce performance.
 
