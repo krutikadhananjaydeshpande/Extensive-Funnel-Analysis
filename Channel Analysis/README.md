@@ -20,11 +20,12 @@ Maven Fuzzy Factory
    WHERE created_at BETWEEN '2012-08-22' AND '2012-11-29' 
        AND utm_campaign = 'nonbrand'
    GROUP BY YEARWEEK(created_at);
- ```
+ 
 
 This query compares the weekly session volume between gsearch and bsearch, helping us understand the relative performance of these two channels over time.
 
 2. **Analyzing mobile traffic percentage for gsearch and bsearch**:
+   
 ```sql
 SELECT 
     utm_source,
@@ -35,7 +36,8 @@ FROM website_sessions
 WHERE created_at BETWEEN '2012-08-22' AND '2012-11-30' 
     AND utm_campaign = 'nonbrand'
 GROUP BY utm_source;
-```
+
+
 This query analyzes the percentage of mobile traffic for gsearch and bsearch, helping us understand device preferences across different channels
 
 3. **Comparing conversion rates for gsearch and bsearch by device type**:
