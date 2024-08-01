@@ -11,8 +11,7 @@ Maven Fuzzy Factory
 ## Queries and Their Purposes
 
 1. **Identifying Funnel Steps**:
-   ```sql
-   CREATE TEMPORARY TABLE first_pageview AS
+   ```sql   CREATE TEMPORARY TABLE first_pageview AS
    SELECT 
        wp.website_session_id, 
        MIN(wp.website_pageview_id) AS first_pageview_id
