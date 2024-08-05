@@ -66,8 +66,5 @@ This project conducts a comprehensive analysis of the conversion funnel for Mave
 - Develop predictive models for customer behavior
 - Integrate real-time dashboarding for continuous monitoring
 
-## Contributors
-[Your Name]
-
 ## License
 This project is licensed under the MIT License - see the LICENSE.md file for details
